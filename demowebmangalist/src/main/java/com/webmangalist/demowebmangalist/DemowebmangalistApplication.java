@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemowebmangalistApplication {
 
 	public static void main(String[] args) {
+		//prouted
 		SpringApplication.run(DemowebmangalistApplication.class, args);
 	}
 
