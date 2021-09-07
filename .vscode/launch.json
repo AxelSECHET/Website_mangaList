@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemowebmangalistApplication<demowebmangalist>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.webmangalist.demowebmangalist.DemowebmangalistApplication",
+            "projectName": "demowebmangalist",
+            "args": ""
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+    <head>
+        <meta charset="utf-8">
+        <title>Demo web manga list</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <h1> Friends</h1>
+
+        <ul>
+            <li th:each="friend : ${friends}" th:text="${friend}"></li>
+        </ul>
+    </body>
+</html>
