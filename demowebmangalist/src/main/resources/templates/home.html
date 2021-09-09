@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
     <head>
@@ -12,5 +13,14 @@
         <ul>
             <li th:each="friend : ${friends}" th:text="${friend}"></li>
         </ul>
+        <div th:text="${infoAPI}">
+            
+        </div>
+        <div>
+            <form action="" method="GET">
+                <label for="search_manga" >Search Manga</label>
+                <input type="text" name="search_manga" autocomplete="on" placeholder="Search manga name">
+            </form>
+        </div>
     </body>
 </html>
