@@ -18,9 +18,12 @@
         </div>
         <div>
             <form action="" method="GET">
-                <label for="search_manga" >Search Manga</label>
-                <input type="text" name="search_manga" autocomplete="on" placeholder="Search manga name">
+                <label for="manga" >Search Manga</label>
+                <input type="text" name="manga" autocomplete="on" placeholder="manga name">
             </form>
+            <div th:text="${manga}">
+
+            </div>
         </div>
     </body>
 </html>
