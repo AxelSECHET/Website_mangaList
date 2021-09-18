@@ -8,22 +8,37 @@
 
     </head>
     <body>
-        <h1> Friends</h1>
+        <h1> MangaList</h1>
 
-        <ul>
-            <li th:each="friend : ${friends}" th:text="${friend}"></li>
-        </ul>
         <div th:text="${infoAPI}">
-            
+            <ul>
+                <li th:each="manga_name : ${search_mangas}" th:text="${manga_name}"></li>
+            </ul>
         </div>
         <div>
             <form action="" method="GET">
                 <label for="manga" >Search Manga</label>
                 <input type="text" name="manga" autocomplete="on" placeholder="manga name">
             </form>
-            <div th:text="${manga}">
-
-            </div>
+            <div th:text="${manga}"></div>
         </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th> Title </th>
+                    <th> Synopsis </th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:if="${search_mangas.empty}">
+                    <td colspan="2"> No Mangas Available </td>
+                </tr>
+                <tr th:each="manga : ${search_mangas}">
+                    <td><span th:text="${manga}"> Title </span></td>
+                    <!--<td><span th:text="${book.author}"> Author </span></td>-->
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>
