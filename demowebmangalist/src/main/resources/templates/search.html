@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+    <head>
+        <meta charset="utf-8">
+        <title>Demo web manga list</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <h1>
+            <a href="http://localhost:8080/">MangaList</a>
+        </h1>
+
+        <h1> Search Manga</h1>
+        <div>
+            <form action="" method="GET">
+                <label for="manga" >Search Manga</label>
+                <input type="text" name="manga" autocomplete="on" placeholder="manga name">
+            </form>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th> Title </th>
+                    <th> Synopsis </th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:if="${#lists.isEmpty(search_mangas)}">
+                    <td colspan="2"> No Mangas Available </td>
+                </tr>
+                <tr th:each="manga : ${search_mangas}">
+                    <td><span th:text="${manga}"> Title </span></td>
+                    <!--<td><span th:text="${book.author}"> Author </span></td>-->
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
