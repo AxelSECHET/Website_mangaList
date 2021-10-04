@@ -3,6 +3,7 @@ package com.webmangalist.demowebmangalist.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import com.webmangalist.demowebmangalist.models.KitsuAPI;
 
@@ -22,8 +23,8 @@ public class HomeController{
     @GetMapping("/")
     public String index(@RequestParam(required = false) String manga, ModelMap modelMap) throws Exception{
         System.out.println("\n\n\n\n INITIALISATION INDEX\n\n\n\n\n\n");
+
         if(manga != null){
-            System.out.println("\n\n\n\n AOLKhnliokdfuh qikf\n\n\n\n\n\n");
             return searchManga(manga, modelMap);
         }else{
             return "home";

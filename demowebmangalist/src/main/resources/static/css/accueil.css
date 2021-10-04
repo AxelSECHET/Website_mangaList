@@ -1,0 +1,21 @@
+/*
+Feuille de style de la page Accueil 
+*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    /*background-image: url(../img/radial_lines_gray.png);*/
+    background-color: #bba7a7;
+    size: contain;
+}
+
+.banner{
+    background-color: #666666ff;
+    color: #000000;
+}
+.searchmanga{
+    padding-top: 5%;
+}
+.tabmangas{
+    background-color: #999999ff;
+    color: #000000;
+}
